@@ -23,7 +23,12 @@ public class MainActivity extends AppCompatActivity {
         game = new Game();
         if (savedInstanceState != null) {
             game = (Game) savedInstanceState.getSerializable("Game");
+            for (int button_id : buttons) {
+                Button button = findViewById(button_id);
+                button.setText(savedInstanceState.getString("" + button_id));
+            }
         }
+
     }
 
     public void tileClicked(View view) {
@@ -127,5 +132,9 @@ public class MainActivity extends AppCompatActivity {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putSerializable("Game", game);
+        for (int button_id : buttons) {
+            Button button = findViewById(button_id);
+            outState.putString(""+button_id, (String) button.getText());
+        }
     }
 }

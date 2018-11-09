@@ -6,8 +6,6 @@ public class Game implements Serializable {
     public TileState[][] board;
 
     private Boolean playerOneTurn;  // true if player 1's turn, false if player 2's turn
-    private int movesPlayed;
-    private Boolean gameOver;
 
     public Game() {
         board = new TileState[BOARD_SIZE][BOARD_SIZE];
@@ -16,7 +14,6 @@ public class Game implements Serializable {
                 board[i][j] = TileState.BLANK;
 
         playerOneTurn = true;
-        gameOver = false;
     }
 
     public TileState choose(int row, int column) {
