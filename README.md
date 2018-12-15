@@ -1,6 +1,7 @@
 Tic-Tac-Toe by Ivo de Brouwer 11045841
 
 Extra features:
+- Lets the user play against the computer.
 - Allows the user to choose either a two-player game or play against the computer.
 - Uses nice large pictures of crosses/circle
 
