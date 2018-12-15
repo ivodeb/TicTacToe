@@ -1,10 +1,14 @@
 Simple Tic-Tac-Toe app with state preservation and more features to come!
 
-Working app:
+Start menu:
 
-![1](tictactoe1.png)
+![1](TicTacToe1.jpg)
 
-In app studio:
+Two-player game:
 
-![2](tictactoe2.png)
+![2](TicTacToe2.jpg)
+
+Versus computer:
+
+![3](TicTacToe3.jpg
 
