@@ -2,13 +2,12 @@ Simple Tic-Tac-Toe app with state preservation and more features to come!
 
 Start menu:
 
-<img src="TicTacToe1.jpg" width="48">
+<img src="TicTacToe1.jpg" width="200">
 
 Two-player game:
 
-![2](TicTacToe2.jpg)
+<img src="TicTacToe2.jpg" width="200">
 
 Versus computer:
 
-![3](TicTacToe3.jpg)
-
+<img src="TicTacToe3.jpg" width="200">
