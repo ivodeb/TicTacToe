@@ -10,5 +10,5 @@ Two-player game:
 
 Versus computer:
 
-![3](TicTacToe3.jpg
+![3](TicTacToe3.jpg)
 
