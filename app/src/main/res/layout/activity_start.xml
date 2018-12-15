@@ -13,20 +13,29 @@
         android:fontFamily="@font/bold"
         android:gravity="center_horizontal"
         android:text="Tic Tac Toe"
-        android:textSize="84sp"
+        android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/tictactoe_image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:srcCompat="@drawable/tictactoe" />
 
     <Button
         android:id="@+id/two_player_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onTwoPlayerClicked"
-        android:text="Play versus a friend!"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:text="Play vs a friend!"
+        app:layout_constraintTop_toBottomOf="@+id/tictactoe_image"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -34,10 +43,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onComputerClicked"
-        android:text="Play versus the computer!"
-        app:layout_constraintTop_toBottomOf="@+id/two_player_button"
+        android:text="Play vs the computer!"
+        app:layout_constraintTop_toBottomOf="@+id/tictactoe_image"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

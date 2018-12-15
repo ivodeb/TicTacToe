@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                     button.setTextColor(Color.BLUE);
                 }
             }
+            Button reset = findViewById(R.id.reset);
+            reset.setText(savedInstanceState.getString("reset"));
         }
 
     }
@@ -177,5 +179,7 @@ public class MainActivity extends AppCompatActivity {
             Button button = findViewById(button_id);
             outState.putString(""+button_id, (String) button.getText());
         }
+        Button reset = findViewById(R.id.reset);
+        outState.putString("reset", (String) reset.getText());
     }
 }
