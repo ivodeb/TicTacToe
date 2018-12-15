@@ -1,13 +1,11 @@
-Simple Tic-Tac-Toe app with state preservation and more features to come!
+Tic-Tac-Toe by Ivo de Brouwer 11045841
 
-Start menu:
+Extra features:
+- Allows the user to choose either a two-player game or play against the computer.
+- Uses nice large pictures of crosses/circle
+
+Images:
 
 <img src="TicTacToe1.jpg" width="200">
-
-Two-player game:
-
 <img src="TicTacToe2.jpg" width="200">
-
-Versus computer:
-
 <img src="TicTacToe3.jpg" width="200">
