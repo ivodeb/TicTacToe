@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:padding="8dp"
+        android:padding="16dp"
         app:columnCount="3">
 
         <Button
@@ -99,9 +99,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="80dp"
         android:layout_weight="0"
         android:onClick="resetClicked"
         android:text="Reset" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="80dp"
+        android:layout_weight="0"
+        android:onClick="onBackPressed"
+        android:text="Main menu" />
 
 </LinearLayout>

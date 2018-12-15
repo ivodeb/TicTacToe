@@ -105,6 +105,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(MainActivity.this, StartActivity.class);
+        startActivity(intent);
+    }
+
     // all possible end game states
     public GameState won() {
         int filled_buttons = 0;
