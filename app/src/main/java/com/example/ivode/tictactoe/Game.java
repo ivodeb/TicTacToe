@@ -4,7 +4,6 @@ import java.io.Serializable;
 public class Game implements Serializable {
     final private int BOARD_SIZE = 3;
     public TileState[][] board;
-
     private Boolean playerOneTurn;  // true if player 1's turn, false if player 2's turn
 
     public Game() {

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
@@ -6,83 +7,114 @@
     android:orientation="vertical"
     android:weightSum="1">
 
-    <android.support.v7.widget.GridLayout
+    <TextView
+        android:id="@+id/versus_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_weight="1"
-        app:columnCount="3">
+        android:layout_marginTop="8dp"
+        android:padding="8dp" />
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:onClick="tileClicked" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+        <android.support.v7.widget.GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="75dp"
             android:layout_weight="1"
-            android:onClick="tileClicked" />
+            android:padding="0dp"
+            app:columnCount="3">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="@font/bold"
+                android:onClick="tileClicked"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="@font/bold"
+                android:onClick="tileClicked"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="@font/bold"
+                android:onClick="tileClicked"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="@font/bold"
+                android:onClick="tileClicked"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="@font/bold"
+                android:onClick="tileClicked"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="@font/bold"
+                android:onClick="tileClicked"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="@font/bold"
+                android:onClick="tileClicked"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="@font/bold"
+                android:onClick="tileClicked"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:fontFamily="@font/bold"
+                android:onClick="tileClicked"
+                android:textSize="30sp" />
+        </android.support.v7.widget.GridLayout>
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:onClick="tileClicked" />
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="75dp"
+            android:layout_weight="0"
+            android:onClick="resetClicked"
+            android:text="Reset" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:onClick="tileClicked" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:onClick="tileClicked" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:onClick="tileClicked" />
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:onClick="tileClicked" />
-
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:onClick="tileClicked" />
-
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:onClick="tileClicked" />
-    </android.support.v7.widget.GridLayout>
-
-    <Button
-        android:id="@+id/reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0"
-        android:onClick="resetClicked"
-        android:text="Reset" />
+    </LinearLayout>
 
 </LinearLayout>
+

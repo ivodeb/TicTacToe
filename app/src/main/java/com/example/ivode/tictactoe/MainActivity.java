@@ -1,9 +1,12 @@
 package com.example.ivode.tictactoe;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
             R.id.button6, R.id.button7, R.id.button8, R.id.button9};
     int row = 0;
     int column = 0;
+    boolean vs_computer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +24,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // check if vs computer or 2-player game
+        Intent intent = getIntent();
+        vs_computer = intent.getBooleanExtra("game", false);
+        TextView versus_text = findViewById(R.id.versus_text);
+        if (vs_computer) {
+            versus_text.setText("Game versus computer");
+        }
+        else {
+            versus_text.setText("Two-player game");
+        }
         game = new Game();
+
+        // state restoration
         if (savedInstanceState != null) {
             game = (Game) savedInstanceState.getSerializable("Game");
             for (int button_id : buttons) {
                 Button button = findViewById(button_id);
-                button.setText(savedInstanceState.getString("" + button_id));
+                String button_text = savedInstanceState.getString("" + button_id);
+                button.setText(button_text);
+                if (button_text == "X") {
+                    button.setTextColor(Color.RED);
+                }
+                else if (button_text == "O") {
+                    button.setTextColor(Color.BLUE);
+                }
             }
         }
 
@@ -47,9 +70,23 @@ public class MainActivity extends AppCompatActivity {
         switch (state) {
             case CROSS:
                 ((Button) view).setText("X");
+                ((Button) view).setTextColor(Color.RED);
+                // if vs computer, let AI do the CIRCLE moves
+                if (vs_computer && won() == GameState.IN_PROGRESS) {
+                    for (int i = 0; i < 9; i++) {
+                        Button button = findViewById(buttons[i]);
+                        if (button.getText() == "") {
+                            game.choose(i / 3, i % 3);
+                            button.setText("O");
+                            button.setTextColor(Color.BLUE);
+                            break;
+                        }
+                    }
+                }
                 break;
             case CIRCLE:
                 ((Button) view).setText("O");
+                ((Button) view).setTextColor(Color.BLUE);
                 break;
             case INVALID:
                 break;
@@ -66,11 +103,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // all possible end game states
     public GameState won() {
         int filled_buttons = 0;
         for(int i = 0; i < 9; i++) {
             row = i / 3;
             column = i % 3;
+            // check if player one has won
             if (game.board[row][column] == TileState.CROSS &&
                     game.board[row][(column + 1) % 3] == TileState.CROSS &&
                     game.board[row][(column + 2) % 3] == TileState.CROSS) {
@@ -89,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
                     && game.board[0][2] == TileState.CROSS) {
                 return GameState.PLAYER_ONE;
             }
+            // check if player two has won
             else if (game.board[row][column] == TileState.CIRCLE &&
                     game.board[row][(column + 1) % 3] == TileState.CIRCLE &&
                     game.board[row][(column + 2) % 3] == TileState.CIRCLE) {
@@ -112,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
                 filled_buttons++;
             }
         }
+        // check if it's a draw
         if (filled_buttons == 9) {
             return GameState.DRAW;
         }
