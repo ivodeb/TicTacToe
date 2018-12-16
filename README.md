@@ -7,6 +7,7 @@ Extra features:
 
 Images:
 
-<img src="TicTacToe1.jpg" width="200">
-<img src="TicTacToe2.jpg" width="200">
-<img src="TicTacToe3.jpg" width="200">
+Title screen                 | Two-player-game              | Game versus computer        
+:---------------------------:|:----------------------------:|:----------------------------:|
+![](TicTacToe1.jpg)          | ![](TicTacToe2.jpg)          | ![](TicTacToe3.jpg)          |
+
