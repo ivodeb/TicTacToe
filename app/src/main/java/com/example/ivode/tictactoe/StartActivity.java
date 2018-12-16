@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+/** Menu with title screen and choice of 2-player game or game vs. computer. */
 public class StartActivity extends AppCompatActivity {
 
     @Override

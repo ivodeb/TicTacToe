@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import java.util.Arrays;
 
+/** Create and visualise a tic-tac-toe game. */
 public class MainActivity extends AppCompatActivity {
-    // create game and initialize variables
     Game game;
     Integer[] buttons = {R.id.button1, R.id.button2, R.id.button3, R.id.button4, R.id.button5,
             R.id.button6, R.id.button7, R.id.button8, R.id.button9};
@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // determines what happens when a tile is clicked, includes playing vs. AI
     public void tileClicked(View view) {
         if (won() != GameState.IN_PROGRESS) {
             resetClicked(findViewById(R.id.reset));
@@ -110,6 +111,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, StartActivity.class);
         startActivity(intent);
     }
+
+    public void onHomeClicked(View view) {
+        Intent intent = new Intent(MainActivity.this, StartActivity.class);
+        startActivity(intent);
+    }
+
 
     // all possible end game states
     public GameState won() {

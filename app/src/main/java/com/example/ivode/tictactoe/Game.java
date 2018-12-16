@@ -1,12 +1,13 @@
 package com.example.ivode.tictactoe;
 import java.io.Serializable;
 
-public class Game implements Serializable {
-    final private int BOARD_SIZE = 3;
-    public TileState[][] board;
+/** Game class determines board size and state of each tile when chosen. */
+class Game implements Serializable {
+    TileState[][] board;
     private Boolean playerOneTurn;  // true if player 1's turn, false if player 2's turn
 
-    public Game() {
+    Game() {
+        final int BOARD_SIZE = 3;
         board = new TileState[BOARD_SIZE][BOARD_SIZE];
         for(int i=0; i<BOARD_SIZE; i++)
             for(int j=0; j<BOARD_SIZE; j++)
@@ -15,7 +16,7 @@ public class Game implements Serializable {
         playerOneTurn = true;
     }
 
-    public TileState choose(int row, int column) {
+    TileState choose(int row, int column) {
         if (board[row][column] == TileState.BLANK) {
             if (playerOneTurn) {
                 board[row][column] = TileState.CROSS;
