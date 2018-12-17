@@ -10,7 +10,7 @@ Note:
 
 ## Screenshots
 
-Title screen                 | Two-player-game              | Game versus computer        
-:---------------------------:|:----------------------------:|:----------------------------:|
-![](TicTacToe1.jpg)          | ![](TicTacToe2.jpg)          | ![](TicTacToe3.jpg)          |
+Title screen                     | Two-player-game                  | Game versus computer        
+:-------------------------------:|:--------------------------------:|:--------------------------------:|
+![](doc/TicTacToe1.jpg)          | ![](doc/TicTacToe2.jpg)          | ![](doc/TicTacToe3.jpg)          |
 
